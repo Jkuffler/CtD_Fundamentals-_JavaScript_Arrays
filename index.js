@@ -50,8 +50,9 @@ function getElementAt(arr, num) {
 //    should result in the next line appearing in your console...
 // [1, 0, 'a', 'test']
 
-function insertZeroInArray() {
-
+function insertZeroInArray(arr) {
+  arr.splice(2, 0, 0);
+  return arr;
 }
 
 
