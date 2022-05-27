@@ -39,8 +39,17 @@ function isEmpty(arr) {
 // null
 
 function getElementAt(arr, num) {
-  return arr.length < num ? null : arr[num];
-}
+  if(arr.length <= 0) {
+    return null;
+  }
+  if(arr.length > 0 && num < 0) {
+    return null;
+  }
+  
+  if( (arr.length-1) < num) {
+    return null;
+  } else return arr[num];
+};
 
 
 // QUESTION 3: Write a function that takes one Array parameter, inserts the value `0` at the second position in the array, and returns the new Array
@@ -51,7 +60,7 @@ function getElementAt(arr, num) {
 // [1, 0, 'a', 'test']
 
 function insertZeroInArray(arr) {
-  arr.splice(2, 0, 0);
+  arr.splice(1, 0, 0);
   return arr;
 }
 
@@ -68,11 +77,21 @@ function insertZeroInArray(arr) {
 // OR console.log("testing out my function for Q4: ", isEqual([1,2,3], [1,2,3]));
 // true
 
-function isEqual() {
-
+function isEqual(arr1, arr2) {
+  let equal = Boolean;
+  if(arr1.length !== arr2.length) {
+    return equal = false;
+  } else if(arr1.length === arr2.length){  
+      for(let i = 0; i < arr1.length; i++) {
+      for(let j=0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j]){
+          equal = true;
+          } else equal = false;
+        }
+      }
+    }
+  return equal;
 }
-
-
 // QUESTION 5: Write a function that takes one Array parameter and returns the sum of all the Array elements
 // BONUS: use the `reduce()` method
 
