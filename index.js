@@ -83,7 +83,7 @@ function isEqual(arr1, arr2) {
     return equal = false;
   } else if(arr1.length === arr2.length){  
       for(let i = 0; i < arr1.length; i++) {
-      for(let j=0; j < arr2.length; j++) {
+      for(let j = 0; j < arr2.length; j++) {
         if (arr1[i] === arr2[j]){
           equal = true;
           } else equal = false;
@@ -91,7 +91,7 @@ function isEqual(arr1, arr2) {
       }
     }
   return equal;
-}
+};
 // QUESTION 5: Write a function that takes one Array parameter and returns the sum of all the Array elements
 // BONUS: use the `reduce()` method
 
@@ -100,8 +100,8 @@ function isEqual(arr1, arr2) {
 //    should result in the next line appearing in your console...
 // 15
 
-const calculateArraySum = () => {
-
+const calculateArraySum = (arr) => {
+  return arr.reduce( (total, num) => total + Math.round(num));
 }
 
 
