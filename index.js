@@ -39,7 +39,7 @@ function isEmpty(arr) {
 // null
 
 function getElementAt(arr, num) {
-  arr[num] ? arr[num] : null;
+  return arr.length < num ? null : arr[num];
 }
 
 
