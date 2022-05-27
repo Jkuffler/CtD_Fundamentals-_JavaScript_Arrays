@@ -20,9 +20,11 @@
 // console.log("testing out my function for Q1: ", isEmpty([1,"a","test"]));
 // false
 
-function isEmpty() {
-
-}
+function isEmpty(arr) {
+  if (arr.length > 0) {
+    return false;
+  } else return true;
+};
 
 
 // QUESTION 2: Write a function that takes one Array parameter and one Number parameter and returns the element in the array at the given number index, null if it doesn't exist
@@ -36,8 +38,8 @@ function isEmpty() {
 // console.log("testing out my function for Q2: ", getElementAt([1,"a"], 2));
 // null
 
-function getElementAt() {
-
+function getElementAt(arr, num) {
+  arr[num] ? arr[num] : null;
 }
 
 
