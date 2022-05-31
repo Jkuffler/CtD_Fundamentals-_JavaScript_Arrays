@@ -113,9 +113,10 @@ const calculateArraySum = (arr) => {
 //    should result in the next line appearing in your console...
 // [10,2,6]
 
-const findEvenNumbers = () => {
 
-}
+const findEvenNumbers = (arr) => {
+  return arr.filter(num => num%2 === 0); /* C L A S S I C filter() method */
+};
 
 
 // QUESTION 7: Write a function that takes one Array parameter and returns a new Array of all the odd numbers
@@ -125,8 +126,8 @@ const findEvenNumbers = () => {
 // console.log("testing out my function for Q7: ", findOddNumbers([10,2,3,7,6,93]));
 //    should result in the next line appearing in your console...
 // [3,7,93]
-const findOddNumbers = () => {
-
+const findOddNumbers = (arr) => {
+ return arr.filter(num => num%2 !== 0);
 }
 
 
