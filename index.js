@@ -77,7 +77,7 @@ function insertZeroInArray(arr) {
 // OR console.log("testing out my function for Q4: ", isEqual([1,2,3], [1,2,3]));
 // true
 
-function isEqual(arr1, arr2) {
+function isEqual(arr1, arr2) { /* submitted request to review the test on this function */
   let equal = Boolean;
   if(arr1.length !== arr2.length) {
     return equal = false;
@@ -140,8 +140,8 @@ const findOddNumbers = (arr) => {
 //    should result in the next line appearing in your console...
 // [4,25,64]
 
-const squareNumbers = () => {
-
+const squareNumbers = (arr) => {
+  return arr.map(num => num*num);
 }
 
 
