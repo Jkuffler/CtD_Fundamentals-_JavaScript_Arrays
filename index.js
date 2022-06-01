@@ -78,19 +78,15 @@ function insertZeroInArray(arr) {
 // true
 
 function isEqual(arr1, arr2) { /* submitted request to review the test on this function */
-  let equal = Boolean;
   if(arr1.length !== arr2.length) {
-    return equal = false;
-  } else if(arr1.length === arr2.length){  
-      for(let i = 0; i < arr1.length; i++) {
-      for(let j = 0; j < arr2.length; j++) {
-        if (arr1[i] === arr2[j]){
-          equal = true;
-          } else equal = false;
+    return false;
+  }  
+  for(let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]){
+      return false;
         }
       }
-    }
-  return equal;
+  return true;
 };
 // QUESTION 5: Write a function that takes one Array parameter and returns the sum of all the Array elements
 // BONUS: use the `reduce()` method
@@ -153,8 +149,18 @@ const squareNumbers = (arr) => {
 // [1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz', 'Buzz']
 
 const fizzBuzz = () => {
-
-}
+  let result = []
+  for(let i=1; i <= 10; i++) {
+    if(i%3 === 0 && i%5 === 0) {
+      result.push("Fizzbuzz");
+    } else if(i%3 === 0) {
+      result.push("Fizz");
+    } else if(i%5 === 0) {
+      result.push("Buzz");
+    } else result.push(i);
+  }
+  return result;
+};
 
 
 
